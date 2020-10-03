@@ -1,0 +1,19 @@
+
+
+Para hacer operaciones dentro de un string puedes usar comillas invertidas y los operadores o variables entre `${ 2+3}`)
+
+typeof se utiliza para saber el tipo de una variable
+
+operadores booleanos true or false != ==
+
+operadores logicos 
+Solo admite tres, 
+El operador AND (&&) , el operador OR ( || ) negacion (!)
+
+Valores Vacios - Empty Values
+Operador ternario
+Condicional ? 1 : 2
+Condicional ? 1 : 2
+
+5>3 ? Si : no =si
+1>2 ? si : no = NO
