@@ -1,4 +1,7 @@
 
+Puedes calcular el mismo valor poniendo el operador antes de =
+x *= 2
+x +=2
 
 Para hacer operaciones dentro de un string puedes usar comillas invertidas y los operadores o variables entre `${ 2+3}`)
 
@@ -17,3 +20,14 @@ Condicional ? 1 : 2
 
 5>3 ? Si : no =si
 1>2 ? si : no = NO
+
+Function
+function nombre(parametro)
+{ lo que hace la funcion}
+
+Arrow functions 
+=> 
+funcionhola = x => {x + 1}
+
+cuando solo pasas un parametro no es necesario los parentesis 
+Si no estas pasando parametros o si estas pasando 2 o mas parametros debes siempre usar parentesis
