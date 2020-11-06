@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Montañas</title>
+    <style type="text/css">
+    body{
+        padding: 10%;
+        background-color: antiquewhite;  
+        
+    }
+    table{
+        background-color:rgba(250, 235, 215, 0.952);
+        width: 100%; 
+    }
+    td{
+        border: chocolate 1px solid;
+        background-color: lightsalmon;
+       text-align: center;
+       padding: 10px; 
+    }
+    th{
+       color: chocolate;
+        padding: 10px
+    }
+    </style>
+</head>
+<body>
+    <h1>Montañas</h1>
+
+
+    <script>
+        const mountains = 
+        [
+        {name: "Kilimanjaro", height: 5895, place: "Tanzania"},
+
+        {name: "Everest", height: 8848, place: "Nepal"},
+
+        {name: "Mount Fuji", height: 3776, place: "Japan"},
+
+        {name: "Vaalserberg", height: 323, place: "Netherlands"},
+
+        {name: "Denali", height: 6168, place: "United States"},
+
+        {name: "Popocatepetl", height: 5465, place: "Mexico"},
+
+        {name: "Mont Blanc", height: 4808, place: "Italy/France"}
+
+        ];
+
+        let propiedades = Object.getOwnPropertyNames(mountains[0]);
+        
+        let th ='<tr> <th>'+propiedades[0].toUpperCase()+'</th> <th>'+propiedades[1].toUpperCase()+'</th> <th>'+propiedades[2].toUpperCase()+'</th> </tr>';
+        
+        document.write("<table>");
+        document.write(th);
+        
+        for(i = 0; i < 7; i++){
+            let name = mountains[i].name;
+            let height = mountains[i].height;
+            let place = mountains[i].place;
+            let td = '<tr> <td>' + name + '</td> <td>'+ height + ' KM </td> <td>'+ place +'</td> </tr>';
+        document.write(td)                
+
+        }
+        document.write("</table>");
+    </script>
+</body>
+</html>

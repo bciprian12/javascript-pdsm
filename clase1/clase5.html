@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tarea 5</title>
+    <style type="text/css">
+    body{
+        background-color: blanchedalmond;
+        font-size: large;
+        padding: 10%;
+    }
+    img { 
+        height: 40px;
+        width: auto;
+    }
+
+    p{
+        display: inline;
+        
+    }
+    </style>
+</head>
+<body>
+    <h1>Tarea sobre el DOM y modificar elementos de este.</h1>
+
+    <h2>Entrar al sitio y ver las imágenes dentro del texto y que existan 
+        <img src="img/botones.png" alt="dos botones">, <img src="img/presionar.png" alt="presiono"> 
+        el botón de ‘solo <img src="img/ver.png" alt="ver"> 
+        texto’ eso me <img src="img/cambio.png" alt="cambia"> las imágenes por el 
+        <img src="img/texto.png" alt="texto"> que tengan las imágenes en el atributo ALT 
+        luego si presiono el botón ‘ver imágenes’ vuelve y me muestra las imágenes</h2>
+
+    <p><button onclick="remplazarImagenes()">Cambiar a Texto</button></p>
+    <p><button onclick="remplazarTexto()">Cambiar a Imagenes</button></p>
+   
+   
+   <Script>
+        let textoConImagen = document.getElementsByTagName("h2")[0].innerHTML;
+        function remplazarImagenes() 
+        {
+         let imagenes = document.body.getElementsByTagName("img");
+         for(let i = imagenes.length - 1; i >= 0; i--)
+         {
+            let imagen = imagenes[i];
+                if (imagen.alt) 
+                {
+                let texto = document.createTextNode(imagen.alt);
+                imagen.parentNode.replaceChild(texto, imagen);
+                }   
+         }   
+        }
+        function remplazarTexto()
+        {
+        document.getElementsByTagName("h2")[0].innerHTML = textoConImagen;
+        }
+    </Script>
+</body>
+</html>
